@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="HideSharePointSearchBox"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="f3c200df-b048-4b62-a3f8-2d0d33446904"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>

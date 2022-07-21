@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hide-share-point-search-box-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "manifest": "./src/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HideSharePointSearchBoxApplicationCustomizerStrings": "lib/extensions/hideSharePointSearchBox/loc/{locale}.js"
+  }
+}

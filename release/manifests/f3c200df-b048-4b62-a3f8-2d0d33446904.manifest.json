@@ -1,0 +1,26 @@
+{
+  "id": "f3c200df-b048-4b62-a3f8-2d0d33446904",
+  "alias": "HideSharePointSearchBoxApplicationCustom",
+  "componentType": "Extension",
+  "extensionType": "ApplicationCustomizer",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "<!-- PATH TO CDN -->"
+    ],
+    "entryModuleId": "hide-share-point-search-box-application-customizer",
+    "scriptResources": {
+      "hide-share-point-search-box-application-customizer": {
+        "type": "path",
+        "path": "hide-share-point-search-box-application-customizer_707beeb81f3f289c6df5.js"
+      },
+      "@microsoft/sp-application-base": {
+        "type": "component",
+        "id": "4df9bb86-ab0a-4aab-ab5f-48bf167048fb",
+        "version": "1.14.0"
+      }
+    }
+  }
+}

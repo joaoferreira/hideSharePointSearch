@@ -1,0 +1,330 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.2",
+  "hash": "d152312922c647c48210",
+  "time": 1301,
+  "builtAt": 1658393896619,
+  "publicPath": "",
+  "outputPath": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\dist",
+  "assetsByChunkName": {
+    "hide-share-point-search-box-application-customizer": "hide-share-point-search-box-application-customizer_707beeb81f3f289c6df5.js"
+  },
+  "assets": [
+    {
+      "name": "f3c200df-b048-4b62-a3f8-2d0d33446904.manifest.json",
+      "size": 816,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "hide-share-point-search-box-application-customizer_707beeb81f3f289c6df5.js",
+      "size": 1934,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "hide-share-point-search-box-application-customizer"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "hide-share-point-search-box-application-customizer": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "hide-share-point-search-box-application-customizer_707beeb81f3f289c6df5.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "hide-share-point-search-box-application-customizer": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "hide-share-point-search-box-application-customizer_707beeb81f3f289c6df5.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 2227,
+      "names": [
+        "hide-share-point-search-box-application-customizer"
+      ],
+      "files": [
+        "hide-share-point-search-box-application-customizer_707beeb81f3f289c6df5.js"
+      ],
+      "hash": "df65bc7accfc52529be5",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "8GJC",
+          "identifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "name": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "index": 0,
+          "index2": 1,
+          "size": 2185,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+              "loc": "hide-share-point-search-box-application-customizer"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is an entry point"
+          ],
+          "depth": 0,
+          "source": "var __extends = (this && this.__extends) || (function () {\r\n    var extendStatics = function (d, b) {\r\n        extendStatics = Object.setPrototypeOf ||\r\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\r\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\r\n        return extendStatics(d, b);\r\n    };\r\n    return function (d, b) {\r\n        extendStatics(d, b);\r\n        function __() { this.constructor = d; }\r\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\r\n    };\r\n})();\r\nimport { BaseApplicationCustomizer } from '@microsoft/sp-application-base';\r\nvar LOG_SOURCE = 'HideSharePointSearchBoxApplicationCustomizer';\r\n/** A Custom Action which can be run during execution of a Client Side Application */\r\nvar HideSharePointSearchBoxApplicationCustomizer = /** @class */ (function (_super) {\r\n    __extends(HideSharePointSearchBoxApplicationCustomizer, _super);\r\n    function HideSharePointSearchBoxApplicationCustomizer() {\r\n        return _super !== null && _super.apply(this, arguments) || this;\r\n    }\r\n    HideSharePointSearchBoxApplicationCustomizer.prototype.onInit = function () {\r\n        var keepSearch = false;\r\n        //Keep search box for lists \r\n        if (document.location.href.indexOf('/Lists/') != -1) {\r\n            keepSearch = true;\r\n        }\r\n        //Keep search box for document libraries \r\n        if (document.location.href.indexOf('/Forms/') != -1) {\r\n            keepSearch = true;\r\n        }\r\n        //On any other SharePoint page hide the search box\r\n        if (!keepSearch) {\r\n            var css = '#O365_SearchBoxContainer_container{display:none;}';\r\n            var style = document.createElement('style');\r\n            document.getElementsByTagName('body')[0].appendChild(style);\r\n            style.appendChild(document.createTextNode(css));\r\n        }\r\n        return Promise.resolve();\r\n    };\r\n    return HideSharePointSearchBoxApplicationCustomizer;\r\n}(BaseApplicationCustomizer));\r\nexport default HideSharePointSearchBoxApplicationCustomizer;\r\n//# sourceMappingURL=HideSharePointSearchBoxApplicationCustomizer.js.map"
+        },
+        {
+          "id": "GPet",
+          "identifier": "external \"@microsoft/sp-application-base\"",
+          "name": "external \"@microsoft/sp-application-base\"",
+          "index": 1,
+          "index2": 0,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "issuerId": "8GJC",
+          "issuerName": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "issuerPath": [
+            {
+              "id": "8GJC",
+              "identifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+              "name": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "8GJC",
+              "moduleIdentifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+              "module": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+              "moduleName": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "@microsoft/sp-application-base",
+              "loc": "14:0-75"
+            },
+            {
+              "moduleId": "8GJC",
+              "moduleIdentifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+              "module": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+              "moduleName": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+              "type": "harmony import specifier",
+              "userRequest": "@microsoft/sp-application-base",
+              "loc": "42:2-27"
+            }
+          ],
+          "usedExports": [
+            "BaseApplicationCustomizer"
+          ],
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "hide-share-point-search-box-application-customizer",
+          "request": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "8GJC",
+      "identifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+      "name": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+      "index": 0,
+      "index2": 1,
+      "size": 2185,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "loc": "hide-share-point-search-box-application-customizer"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is an entry point"
+      ],
+      "depth": 0,
+      "source": "var __extends = (this && this.__extends) || (function () {\r\n    var extendStatics = function (d, b) {\r\n        extendStatics = Object.setPrototypeOf ||\r\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\r\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\r\n        return extendStatics(d, b);\r\n    };\r\n    return function (d, b) {\r\n        extendStatics(d, b);\r\n        function __() { this.constructor = d; }\r\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\r\n    };\r\n})();\r\nimport { BaseApplicationCustomizer } from '@microsoft/sp-application-base';\r\nvar LOG_SOURCE = 'HideSharePointSearchBoxApplicationCustomizer';\r\n/** A Custom Action which can be run during execution of a Client Side Application */\r\nvar HideSharePointSearchBoxApplicationCustomizer = /** @class */ (function (_super) {\r\n    __extends(HideSharePointSearchBoxApplicationCustomizer, _super);\r\n    function HideSharePointSearchBoxApplicationCustomizer() {\r\n        return _super !== null && _super.apply(this, arguments) || this;\r\n    }\r\n    HideSharePointSearchBoxApplicationCustomizer.prototype.onInit = function () {\r\n        var keepSearch = false;\r\n        //Keep search box for lists \r\n        if (document.location.href.indexOf('/Lists/') != -1) {\r\n            keepSearch = true;\r\n        }\r\n        //Keep search box for document libraries \r\n        if (document.location.href.indexOf('/Forms/') != -1) {\r\n            keepSearch = true;\r\n        }\r\n        //On any other SharePoint page hide the search box\r\n        if (!keepSearch) {\r\n            var css = '#O365_SearchBoxContainer_container{display:none;}';\r\n            var style = document.createElement('style');\r\n            document.getElementsByTagName('body')[0].appendChild(style);\r\n            style.appendChild(document.createTextNode(css));\r\n        }\r\n        return Promise.resolve();\r\n    };\r\n    return HideSharePointSearchBoxApplicationCustomizer;\r\n}(BaseApplicationCustomizer));\r\nexport default HideSharePointSearchBoxApplicationCustomizer;\r\n//# sourceMappingURL=HideSharePointSearchBoxApplicationCustomizer.js.map"
+    },
+    {
+      "id": "GPet",
+      "identifier": "external \"@microsoft/sp-application-base\"",
+      "name": "external \"@microsoft/sp-application-base\"",
+      "index": 1,
+      "index2": 0,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+      "issuerId": "8GJC",
+      "issuerName": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+      "issuerPath": [
+        {
+          "id": "8GJC",
+          "identifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "name": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "8GJC",
+          "moduleIdentifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "module": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "moduleName": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "@microsoft/sp-application-base",
+          "loc": "14:0-75"
+        },
+        {
+          "moduleId": "8GJC",
+          "moduleIdentifier": "C:\\Users\\JOFR\\Desktop\\Personal\\SharePoint\\HideSearch\\lib\\extensions\\hideSharePointSearchBox\\HideSharePointSearchBoxApplicationCustomizer.js",
+          "module": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "moduleName": "./lib/extensions/hideSharePointSearchBox/HideSharePointSearchBoxApplicationCustomizer.js",
+          "type": "harmony import specifier",
+          "userRequest": "@microsoft/sp-application-base",
+          "loc": "42:2-27"
+        }
+      ],
+      "usedExports": [
+        "BaseApplicationCustomizer"
+      ],
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1
+    },
+    {
+      "id": "I6O9",
+      "identifier": "external \"@microsoft/sp-loader\"",
+      "name": "external \"@microsoft/sp-loader\"",
+      "index": null,
+      "index2": null,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [],
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": null
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": []
+}
